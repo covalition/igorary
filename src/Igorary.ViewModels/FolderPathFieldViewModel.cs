@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Igorary.ViewModels
 {
-    public class FilePathFieldViewModel: StringFieldViewModel
+    public class FolderPathFieldViewModel: StringFieldViewModel
     {
+        public FolderPathFieldViewModel(string label): base(label) { }
     }
 }

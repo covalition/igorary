@@ -5,6 +5,8 @@ namespace Igorary.ViewModels
 {
     public class FieldViewModel<T>: LabeledFieldViewModel where T : IComparable
     {
+        public FieldViewModel(string label): base(label) {}
+
         private T _value;
 
         public T Value {

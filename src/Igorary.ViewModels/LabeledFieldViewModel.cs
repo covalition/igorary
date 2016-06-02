@@ -9,13 +9,17 @@ namespace Igorary.ViewModels
 {
     public class LabeledFieldViewModel: ViewModelBase
     {
+        public LabeledFieldViewModel(string label) {
+            _label = label;
+        }
+
         private string _label;
 
         public string Label {
             get {
                 return _label;
             }
-            set {
+            private set {
                 if (value != _label) {
                     _label = value;
                     RaisePropertyChanged(() => Label);

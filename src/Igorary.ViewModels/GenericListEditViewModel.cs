@@ -209,7 +209,7 @@ namespace Igorary.ViewModels
             get {
                 return _fields;
             }
-            set {
+            private set {
                 if (value != _fields) {
                     _fields = value;
                     RaisePropertyChanged(() => Fields);

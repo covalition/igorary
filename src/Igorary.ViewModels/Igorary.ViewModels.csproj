@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="BaseListItemViewModel.cs" />
     <Compile Include="FieldViewModel.cs" />
-    <Compile Include="FilePathFieldViewModel.cs" />
+    <Compile Include="FolderPathFieldViewModel.cs" />
     <Compile Include="GenericListEditViewModel.cs" />
     <Compile Include="LabeledFieldViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
