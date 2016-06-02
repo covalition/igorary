@@ -9,6 +9,9 @@
     <Import_RootNamespace>Igorary.Xaml.Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)ApplicationExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\ConfirmButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NamedResourceSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SwitchableDictionary.cs" />
   </ItemGroup>
 </Project>
