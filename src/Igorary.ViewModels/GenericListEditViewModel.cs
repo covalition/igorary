@@ -203,9 +203,9 @@ namespace Igorary.ViewModels
 
         #region Edit
 
-        private List<FieldViewModel> _fields;
+        private List<LabeledFieldViewModel> _fields;
 
-        public List<FieldViewModel> Fields {
+        public List<LabeledFieldViewModel> Fields {
             get {
                 return _fields;
             }
@@ -280,7 +280,6 @@ namespace Igorary.ViewModels
         }
 
         protected virtual void Save() {
-
         }
 
         #endregion

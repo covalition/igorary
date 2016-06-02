@@ -41,8 +41,11 @@
   <ItemGroup>
     <Compile Include="BaseListItemViewModel.cs" />
     <Compile Include="FieldViewModel.cs" />
+    <Compile Include="FilePathFieldViewModel.cs" />
     <Compile Include="GenericListEditViewModel.cs" />
+    <Compile Include="LabeledFieldViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringFieldViewModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
