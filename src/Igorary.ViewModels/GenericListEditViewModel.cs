@@ -9,23 +9,21 @@ using GalaSoft.MvvmLight.Command;
 
 namespace Igorary.ViewModels
 {
-    public class GenericListEditViewModel<TListItemViewModel> : ViewModelBase where TListItemViewModel : BaseListItemViewModel
+    public abstract class GenericListEditViewModel<TListItemViewModel> : ViewModelBase where TListItemViewModel : BaseListItemViewModel
     {
         #region List
 
         public GenericListEditViewModel() {
-            IsInitializing = true;
-            startLoading();
+            reloadItems();
         }
 
-        private async void startLoading() {
-            ListItems = new ObservableCollection<TListItemViewModel>(await GetItems());
+        private async void reloadItems() {
+            IsInitializing = true;
+            ListItems = new ObservableCollection<TListItemViewModel>(await LoadItems());
             IsInitializing = false;
         }
 
-        protected virtual async Task<IEnumerable<TListItemViewModel>> GetItems() {
-            return null;
-        }
+        protected abstract Task<IEnumerable<TListItemViewModel>> LoadItems();
 
         private bool _isInitializing;
 
@@ -120,6 +118,9 @@ namespace Igorary.ViewModels
         }
 
         private void deleteCommandAction() {
+            Delete();
+            SelectedItemIndex = -1;
+            reloadItems();
         }
 
         private bool deleteCommandCanExecute() {
@@ -138,8 +139,9 @@ namespace Igorary.ViewModels
             }
         }
 
-        private void newCommandAction() {
+        private async void newCommandAction() {
             IsNew = true;
+            Fields = await LoadFields();
             Modified = true;
         }
 
@@ -240,6 +242,8 @@ namespace Igorary.ViewModels
             }
         }
 
+        protected abstract void Delete();
+
         #endregion
 
         #region Edit
@@ -258,6 +262,8 @@ namespace Igorary.ViewModels
             }
         }
 
+        protected abstract Task<List<LabeledFieldViewModel>> LoadFields();
+
         #region SaveCommand command
 
         private RelayCommand _saveCommand;
@@ -271,6 +277,7 @@ namespace Igorary.ViewModels
         private void saveCommandAction() {
             Save();
             endEdit();
+            reloadItems();
         }
 
         private bool saveCommandCanExecute() {
@@ -320,8 +327,7 @@ namespace Igorary.ViewModels
             }
         }
 
-        protected virtual void Save() {
-        }
+        protected abstract void Save();
 
         #endregion
     }
