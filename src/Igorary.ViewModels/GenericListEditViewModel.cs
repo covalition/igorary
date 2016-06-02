@@ -157,7 +157,6 @@ namespace Igorary.ViewModels
 
         #region Edit
 
-
         private List<FieldViewModel> _fields;
 
         public List<FieldViewModel> Fields {
