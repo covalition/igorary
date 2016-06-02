@@ -9,11 +9,11 @@ using GalaSoft.MvvmLight.Command;
 
 namespace Igorary.ViewModels
 {
-    public class GenericListEditViewModel<TListView>: ViewModelBase
+    public class GenericListEditViewModel<TListItemViewModel>: ViewModelBase
     {
         #region List
 
-        public ObservableCollection<TListView> ListItems { get; set; }
+        public ObservableCollection<TListItemViewModel> ListItems { get; set; }
 
         private int _pageSize;
 
@@ -85,6 +85,8 @@ namespace Igorary.ViewModels
         private bool deleteCommandCanExecute() {
             return true;
         }
+        
+        #endregion
 
         #region NewCommand command
 
@@ -102,6 +104,8 @@ namespace Igorary.ViewModels
         private bool newCommandCanExecute() {
             return true;
         }
+        
+        #endregion
 
         #region EditCommand command
 
@@ -120,9 +124,7 @@ namespace Igorary.ViewModels
             return true;
         }
 
-        #endregion
-
-        #endregion
+        
 
         #endregion
 
@@ -154,6 +156,21 @@ namespace Igorary.ViewModels
         #endregion
 
         #region Edit
+
+
+        private List<FieldViewModel> _fields;
+
+        public List<FieldViewModel> Fields {
+            get {
+                return _fields;
+            }
+            set {
+                if (value != _fields) {
+                    _fields = value;
+                    RaisePropertyChanged(() => Fields);
+                }
+            }
+        }
 
         #endregion
     }
