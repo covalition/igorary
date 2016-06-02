@@ -9,7 +9,7 @@ using GalaSoft.MvvmLight.Command;
 
 namespace Igorary.ViewModels
 {
-    public class GenericListEditViewModel<TListItemViewModel>: ViewModelBase
+    public class GenericListEditViewModel<TListItemViewModel> : ViewModelBase where TListItemViewModel: BaseListItemViewModel
     {
         #region List
 
@@ -170,6 +170,44 @@ namespace Igorary.ViewModels
                 }
             }
         }
+
+        #region SaveCommand command
+
+        private RelayCommand _saveCommand;
+
+        public RelayCommand SaveCommand {
+            get {
+                return _saveCommand ?? (_saveCommand = new RelayCommand(saveCommandAction, saveCommandCanExecute));
+            }
+        }
+
+        private void saveCommandAction() {
+        }
+
+        private bool saveCommandCanExecute() {
+            return true;
+        }
+
+        #endregion
+
+        #region CancelCommand command
+
+        private RelayCommand _cancelCommand;
+
+        public RelayCommand CancelCommand {
+            get {
+                return _cancelCommand ?? (_cancelCommand = new RelayCommand(cancelCommandAction, cancelCommandCanExecute));
+            }
+        }
+
+        private void cancelCommandAction() {
+        }
+
+        private bool cancelCommandCanExecute() {
+            return true;
+        }
+
+        #endregion
 
         #endregion
     }
