@@ -83,7 +83,7 @@ namespace Igorary.ViewModels
         }
 
         private bool deleteCommandCanExecute() {
-            return Mode == ListEditMode.Browse && SelectedItemIndex != -1;
+            return !IsNew && SelectedItemIndex != -1;
         }
 
         #endregion
@@ -99,12 +99,12 @@ namespace Igorary.ViewModels
         }
 
         private void newCommandAction() {
-            Mode = ListEditMode.New;
+            IsNew = true;
             Modified = true;
         }
 
         private bool newCommandCanExecute() {
-            return Mode != ListEditMode.New && !Modified;
+            return !IsNew && !Modified;
         }
 
         #endregion
@@ -153,17 +153,33 @@ namespace Igorary.ViewModels
 
         #endregion
 
-        private ListEditMode _mode = ListEditMode.Browse;
+        //private ListEditMode _mode = ListEditMode.Browse;
 
-        public ListEditMode Mode {
+        //public ListEditMode Mode {
+        //    get {
+        //        return _mode;
+        //    }
+        //    set {
+        //        if (value != _mode) {
+        //            _mode = value;
+        //            NewCommand.RaiseCanExecuteChanged();
+        //            //EditCommand.RaiseCanExecuteChanged();
+        //            DeleteCommand.RaiseCanExecuteChanged();
+        //        }
+        //    }
+        //}
+
+        private bool _isNew;
+
+        public bool IsNew {
             get {
-                return _mode;
+                return _isNew;
             }
             set {
-                if (value != _mode) {
-                    _mode = value;
+                if (value != _isNew) {
+                    _isNew = value;
+                    RaisePropertyChanged(() => IsNew);
                     NewCommand.RaiseCanExecuteChanged();
-                    //EditCommand.RaiseCanExecuteChanged();
                     DeleteCommand.RaiseCanExecuteChanged();
                 }
             }
@@ -244,7 +260,7 @@ namespace Igorary.ViewModels
 
         private void endEdit() {
             Modified = false;
-            Mode = ListEditMode.Browse;
+            IsNew = false;
         }
 
         private bool _modified = false;
