@@ -235,6 +235,7 @@ namespace Igorary.ViewModels
                 if (value != _selectedItemIndex) {
                     _selectedItemIndex = value;
                     RaisePropertyChanged(() => SelectedItemIndex);
+                    DeleteCommand.RaiseCanExecuteChanged();
                 }
             }
         }
