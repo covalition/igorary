@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Igorary.Wpf
+namespace Igorary.Xaml
 {
     public class NamedResourceSource
     {

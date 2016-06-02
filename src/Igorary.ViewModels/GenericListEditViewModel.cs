@@ -13,7 +13,47 @@ namespace Igorary.ViewModels
     {
         #region List
 
-        public ObservableCollection<TListItemViewModel> ListItems { get; set; }
+        public GenericListEditViewModel() {
+            IsInitializing = true;
+            startLoading();
+        }
+
+        private async void startLoading() {
+            ListItems = new ObservableCollection<TListItemViewModel>(await GetItems());
+            IsInitializing = false;
+        }
+
+        protected virtual async Task<IEnumerable<TListItemViewModel>> GetItems() {
+            return null;
+        }
+
+        private bool _isInitializing;
+
+        public bool IsInitializing {
+            get {
+                return _isInitializing;
+            }
+            set {
+                if (value != _isInitializing) {
+                    _isInitializing = value;
+                    RaisePropertyChanged(() => IsInitializing);
+                }
+            }
+        }
+
+        private ObservableCollection<TListItemViewModel> _listItems;
+
+        public ObservableCollection<TListItemViewModel> ListItems {
+            get {
+                return _listItems;
+            }
+            set {
+                if (value != _listItems) {
+                    _listItems = value;
+                    RaisePropertyChanged(nameof(ListItems));
+                }
+            }
+        }
 
         private int _pageSize;
 

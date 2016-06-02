@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Igorary.Wpf
+namespace Igorary.Xaml
 {
     public static class ApplicationExtensions
     {

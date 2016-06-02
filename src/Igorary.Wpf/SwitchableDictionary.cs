@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows;
 
-namespace Igorary.Wpf
+namespace Igorary.Xaml
 {
     public class SwitchableDictionary : ResourceDictionary
     {

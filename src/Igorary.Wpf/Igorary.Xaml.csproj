@@ -8,8 +8,8 @@
     <ProjectGuid>{B6E920F3-F5E3-4FE0-9A90-FB46EBD7BC9C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Igorary.Wpf</RootNamespace>
-    <AssemblyName>Igorary.Wpf</AssemblyName>
+    <RootNamespace>Igorary.Xaml</RootNamespace>
+    <AssemblyName>Igorary.Xaml</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
