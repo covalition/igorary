@@ -9,7 +9,7 @@ using GalaSoft.MvvmLight.Command;
 
 namespace Igorary.ViewModels
 {
-    public class GenericListEditViewModel<TListItemViewModel> : ViewModelBase where TListItemViewModel: BaseListItemViewModel
+    public class GenericListEditViewModel<TListItemViewModel> : ViewModelBase where TListItemViewModel : BaseListItemViewModel
     {
         #region List
 
@@ -83,9 +83,9 @@ namespace Igorary.ViewModels
         }
 
         private bool deleteCommandCanExecute() {
-            return true;
+            return Mode == ListEditMode.Browse && SelectedItemIndex != -1;
         }
-        
+
         #endregion
 
         #region NewCommand command
@@ -99,34 +99,34 @@ namespace Igorary.ViewModels
         }
 
         private void newCommandAction() {
+            Mode = ListEditMode.New;
+            Modified = true;
         }
 
         private bool newCommandCanExecute() {
-            return true;
+            return Mode != ListEditMode.New && !Modified;
         }
-        
+
         #endregion
 
-        #region EditCommand command
+        //#region EditCommand command
 
-        private RelayCommand _editCommand;
+        //private RelayCommand _editCommand;
 
-        public RelayCommand EditCommand {
-            get {
-                return _editCommand ?? (_editCommand = new RelayCommand(editCommandAction, editCommandCanExecute));
-            }
-        }
+        //public RelayCommand EditCommand {
+        //    get {
+        //        return _editCommand ?? (_editCommand = new RelayCommand(editCommandAction, editCommandCanExecute));
+        //    }
+        //}
 
-        private void editCommandAction() {
-        }
+        //private void editCommandAction() {
+        //}
 
-        private bool editCommandCanExecute() {
-            return true;
-        }
+        //private bool editCommandCanExecute() {
+        //    return Mode == ListEditMode.Browse;
+        //}
 
-        
-
-        #endregion
+        //#endregion
 
         #region GoToPageCommand command
 
@@ -152,6 +152,36 @@ namespace Igorary.ViewModels
         }
 
         #endregion
+
+        private ListEditMode _mode = ListEditMode.Browse;
+
+        public ListEditMode Mode {
+            get {
+                return _mode;
+            }
+            set {
+                if (value != _mode) {
+                    _mode = value;
+                    NewCommand.RaiseCanExecuteChanged();
+                    //EditCommand.RaiseCanExecuteChanged();
+                    DeleteCommand.RaiseCanExecuteChanged();
+                }
+            }
+        }
+
+        private int _selectedItemIndex = -1;
+
+        public int SelectedItemIndex {
+            get {
+                return _selectedItemIndex;
+            }
+            set {
+                if (value != _selectedItemIndex) {
+                    _selectedItemIndex = value;
+                    RaisePropertyChanged(() => SelectedItemIndex);
+                }
+            }
+        }
 
         #endregion
 
@@ -182,10 +212,12 @@ namespace Igorary.ViewModels
         }
 
         private void saveCommandAction() {
+            Save();
+            endEdit();
         }
 
         private bool saveCommandCanExecute() {
-            return true;
+            return Modified;
         }
 
         #endregion
@@ -201,13 +233,39 @@ namespace Igorary.ViewModels
         }
 
         private void cancelCommandAction() {
+            endEdit();
         }
 
         private bool cancelCommandCanExecute() {
-            return true;
+            return Modified;
         }
 
         #endregion
+
+        private void endEdit() {
+            Modified = false;
+            Mode = ListEditMode.Browse;
+        }
+
+        private bool _modified = false;
+
+        public bool Modified {
+            get {
+                return _modified;
+            }
+            set {
+                if (value != _modified) {
+                    _modified = value;
+                    RaisePropertyChanged(() => Modified);
+                    SaveCommand.RaiseCanExecuteChanged();
+                    CancelCommand.RaiseCanExecuteChanged();
+                }
+            }
+        }
+
+        protected virtual void Save() {
+
+        }
 
         #endregion
     }

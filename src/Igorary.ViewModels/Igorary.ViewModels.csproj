@@ -42,6 +42,7 @@
     <Compile Include="BaseListItemViewModel.cs" />
     <Compile Include="FieldViewModel.cs" />
     <Compile Include="GenericListEditViewModel.cs" />
+    <Compile Include="ListEditMode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
