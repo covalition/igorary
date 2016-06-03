@@ -8,6 +8,6 @@ namespace Igorary.ViewModels
 {
     public class StringFieldViewModel: FieldViewModel<string>
     {
-        public StringFieldViewModel(string label): base(label) { }
+        public StringFieldViewModel(string label, ModifiableViewModel parent) : base(label, parent) { }
     }
 }

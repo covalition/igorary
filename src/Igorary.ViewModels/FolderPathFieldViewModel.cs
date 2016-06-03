@@ -8,6 +8,6 @@ namespace Igorary.ViewModels
 {
     public class FolderPathFieldViewModel: StringFieldViewModel
     {
-        public FolderPathFieldViewModel(string label): base(label) { }
+        public FolderPathFieldViewModel(string label, ModifiableViewModel parent) : base(label, parent) { }
     }
 }

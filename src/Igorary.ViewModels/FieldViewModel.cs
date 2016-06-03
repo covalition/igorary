@@ -3,13 +3,18 @@ using GalaSoft.MvvmLight;
 
 namespace Igorary.ViewModels
 {
-    public class FieldViewModel<T>: LabeledFieldViewModel where T : IComparable
+    public class FieldViewModel<TValue> : LabeledFieldViewModel 
+        where TValue : IComparable 
     {
-        public FieldViewModel(string label): base(label) {}
+        ModifiableViewModel _parent;
 
-        private T _value;
+        public FieldViewModel(string label, ModifiableViewModel parent): base(label) {
+            _parent = parent;
+        }
 
-        public T Value {
+        private TValue _value;
+
+        public TValue Value {
             get {
                 return _value;
             }
@@ -17,6 +22,7 @@ namespace Igorary.ViewModels
                 if (value.CompareTo(_value) != 0) {
                     _value = value;
                     RaisePropertyChanged(() => Value);
+                    _parent.Modified = true;
                 }
             }
         }

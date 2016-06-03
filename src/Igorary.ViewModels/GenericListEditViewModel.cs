@@ -9,7 +9,7 @@ using GalaSoft.MvvmLight.Command;
 
 namespace Igorary.ViewModels
 {
-    public abstract class GenericListEditViewModel<TListItemViewModel> : ViewModelBase where TListItemViewModel : BaseListItemViewModel
+    public abstract class GenericListEditViewModel<TListItemViewModel> : ModifiableViewModel where TListItemViewModel : BaseListItemViewModel
     {
         #region List
 
@@ -140,6 +140,7 @@ namespace Igorary.ViewModels
         }
 
         private async void newCommandAction() {
+            SelectedItemIndex = -1;
             IsNew = true;
             Fields = await LoadFields();
             Modified = true;
@@ -238,8 +239,16 @@ namespace Igorary.ViewModels
                     _selectedItemIndex = value;
                     RaisePropertyChanged(() => SelectedItemIndex);
                     DeleteCommand.RaiseCanExecuteChanged();
+                    updateFields();
                 }
             }
+        }
+
+        private async void updateFields() {
+            if (SelectedItemIndex < 0 && !IsNew)
+                Fields = null;
+            else
+                Fields = await LoadFields();
         }
 
         protected abstract void Delete();
@@ -311,21 +320,26 @@ namespace Igorary.ViewModels
             IsNew = false;
         }
 
-        private bool _modified = false;
-
-        public bool Modified {
-            get {
-                return _modified;
-            }
-            set {
-                if (value != _modified) {
-                    _modified = value;
-                    RaisePropertyChanged(() => Modified);
-                    SaveCommand.RaiseCanExecuteChanged();
-                    CancelCommand.RaiseCanExecuteChanged();
-                }
-            }
+        protected override void OnModifiedChange() {
+            SaveCommand.RaiseCanExecuteChanged();
+            CancelCommand.RaiseCanExecuteChanged();
         }
+
+        //private bool _modified = false;
+
+        //public bool Modified {
+        //    get {
+        //        return _modified;
+        //    }
+        //    set {
+        //        if (value != _modified) {
+        //            _modified = value;
+        //            RaisePropertyChanged(() => Modified);
+        //            SaveCommand.RaiseCanExecuteChanged();
+        //            CancelCommand.RaiseCanExecuteChanged();
+        //        }
+        //    }
+        //}
 
         protected abstract void Save();
 
