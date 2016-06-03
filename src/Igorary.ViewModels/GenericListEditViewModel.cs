@@ -14,13 +14,23 @@ namespace Igorary.ViewModels
         #region List
 
         public GenericListEditViewModel() {
-            reloadItems();
+            startReloadingItems();
         }
 
-        private async void reloadItems() {
+        private async void startReloadingItems() {
+            await reloadItems(0);
+        }
+
+        private async Task reloadItems(int newIndex) {
             IsInitializing = true;
-            ListItems = new ObservableCollection<TListItemViewModel>(await LoadItems());
-            IsInitializing = false;
+            try {
+                // int oldSelectedItemIndex = SelectedItemIndex;
+                ListItems = new ObservableCollection<TListItemViewModel>(await LoadItems());
+                SelectedItemIndex = newIndex;
+            }
+            finally {
+                IsInitializing = false;
+            }
         }
 
         protected abstract Task<IEnumerable<TListItemViewModel>> LoadItems();
@@ -117,10 +127,10 @@ namespace Igorary.ViewModels
             }
         }
 
-        private void deleteCommandAction() {
-            Delete();
-            SelectedItemIndex = -1;
-            reloadItems();
+        private async void deleteCommandAction() {
+            await Delete();
+            // SelectedItemIndex = -1;
+            await reloadItems(SelectedItemIndex);
         }
 
         private bool deleteCommandCanExecute() {
@@ -152,25 +162,6 @@ namespace Igorary.ViewModels
 
         #endregion
 
-        //#region EditCommand command
-
-        //private RelayCommand _editCommand;
-
-        //public RelayCommand EditCommand {
-        //    get {
-        //        return _editCommand ?? (_editCommand = new RelayCommand(editCommandAction, editCommandCanExecute));
-        //    }
-        //}
-
-        //private void editCommandAction() {
-        //}
-
-        //private bool editCommandCanExecute() {
-        //    return Mode == ListEditMode.Browse;
-        //}
-
-        //#endregion
-
         #region GoToPageCommand command
 
         private RelayCommand<int> _goToPageCommand;
@@ -196,29 +187,13 @@ namespace Igorary.ViewModels
 
         #endregion
 
-        //private ListEditMode _mode = ListEditMode.Browse;
-
-        //public ListEditMode Mode {
-        //    get {
-        //        return _mode;
-        //    }
-        //    set {
-        //        if (value != _mode) {
-        //            _mode = value;
-        //            NewCommand.RaiseCanExecuteChanged();
-        //            //EditCommand.RaiseCanExecuteChanged();
-        //            DeleteCommand.RaiseCanExecuteChanged();
-        //        }
-        //    }
-        //}
-
         private bool _isNew;
 
         public bool IsNew {
             get {
                 return _isNew;
             }
-            set {
+            private set {
                 if (value != _isNew) {
                     _isNew = value;
                     RaisePropertyChanged(() => IsNew);
@@ -249,9 +224,10 @@ namespace Igorary.ViewModels
                 Fields = null;
             else
                 Fields = await LoadFields();
+            Modified = false;
         }
 
-        protected abstract void Delete();
+        protected abstract Task Delete();
 
         #endregion
 
@@ -283,10 +259,10 @@ namespace Igorary.ViewModels
             }
         }
 
-        private void saveCommandAction() {
-            Save();
+        private async void saveCommandAction() {
+            int newIndex = await Save();
             endEdit();
-            reloadItems();
+            await reloadItems(newIndex);
         }
 
         private bool saveCommandCanExecute() {
@@ -307,6 +283,7 @@ namespace Igorary.ViewModels
 
         private void cancelCommandAction() {
             endEdit();
+            updateFields();
         }
 
         private bool cancelCommandCanExecute() {
@@ -325,23 +302,8 @@ namespace Igorary.ViewModels
             CancelCommand.RaiseCanExecuteChanged();
         }
 
-        //private bool _modified = false;
-
-        //public bool Modified {
-        //    get {
-        //        return _modified;
-        //    }
-        //    set {
-        //        if (value != _modified) {
-        //            _modified = value;
-        //            RaisePropertyChanged(() => Modified);
-        //            SaveCommand.RaiseCanExecuteChanged();
-        //            CancelCommand.RaiseCanExecuteChanged();
-        //        }
-        //    }
-        //}
-
-        protected abstract void Save();
+        /// <returns>New selected index</returns>
+        protected abstract Task<int> Save();
 
         #endregion
     }

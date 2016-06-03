@@ -11,7 +11,7 @@
             <ColumnDefinition />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <TextBox Grid.Column="0" HorizontalAlignment="Stretch" x:Name="tbFolderPath" VerticalAlignment="Center" Text="{Binding FolderPath, ElementName=userControl}" />
+        <TextBox Grid.Column="0" HorizontalAlignment="Stretch" x:Name="tbFolderPath" VerticalAlignment="Center" Text="{Binding FolderPath, ElementName=userControl, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         <Button Grid.Column="1" Content="Select Folder..." Margin="5,0,0,0" x:Name="btnSelectFolder" Click="btnSelectFolder_Click"/>
     </Grid>
 </UserControl>
