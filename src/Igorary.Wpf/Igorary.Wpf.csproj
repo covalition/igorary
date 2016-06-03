@@ -45,13 +45,13 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FolderTextBox.xaml.cs">
+    <Compile Include="Controls\FolderTextBox.xaml.cs">
       <DependentUpon>FolderTextBox.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Page Include="FolderTextBox.xaml">
+    <Page Include="Controls\FolderTextBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
