@@ -7,8 +7,8 @@
     <ProjectGuid>{F7A6A00E-8C50-42A7-89F9-EFAA53F0C463}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Igorary.UWP</RootNamespace>
-    <AssemblyName>Igorary.UWP</AssemblyName>
+    <RootNamespace>Igorary.Uwp</RootNamespace>
+    <AssemblyName>Igorary.Uwp</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10586.0</TargetPlatformVersion>
