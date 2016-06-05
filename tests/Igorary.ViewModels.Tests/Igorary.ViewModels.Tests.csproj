@@ -75,6 +75,7 @@
     <Compile Include="TestClasses\TestEmptyListEditViewModel.cs" />
     <Compile Include="TestClasses\TestExceptionListEditViewModel.cs" />
     <Compile Include="TestClasses\TestListItemViewModel.cs" />
+    <Compile Include="TestClasses\TestOneListEditViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Igorary.ViewModels\Igorary.ViewModels.csproj">

@@ -138,7 +138,7 @@ namespace Igorary.ViewModels
         }
 
         private bool deleteCommandCanExecute() {
-            return !IsNew && SelectedItemIndex != -1;
+            return !IsNew && SelectedItemIndex != -1 && !Modified;
         }
 
         #endregion
@@ -304,6 +304,8 @@ namespace Igorary.ViewModels
         protected override void OnModifiedChange() {
             SaveCommand.RaiseCanExecuteChanged();
             CancelCommand.RaiseCanExecuteChanged();
+            NewCommand.RaiseCanExecuteChanged();
+            DeleteCommand.RaiseCanExecuteChanged();
         }
 
         /// <returns>New selected index</returns>
