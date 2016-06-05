@@ -24,14 +24,18 @@ namespace Igorary.ViewModels
         private async Task reloadItems(int newIndex) {
             IsInitializing = true;
             try {
-                // int oldSelectedItemIndex = SelectedItemIndex;
                 ListItems = new ObservableCollection<TListItemViewModel>(await LoadItems());
                 SelectedItemIndex = newIndex;
+            }
+            catch(Exception ex) {
+                OnException(ex);
             }
             finally {
                 IsInitializing = false;
             }
         }
+
+        protected abstract void OnException(Exception ex);
 
         protected abstract Task<IEnumerable<TListItemViewModel>> LoadItems();
 
