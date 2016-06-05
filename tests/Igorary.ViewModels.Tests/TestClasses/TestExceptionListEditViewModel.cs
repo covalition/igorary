@@ -12,7 +12,7 @@ namespace Igorary.ViewModels.Tests.TestClasses
         public bool ExceptionThrown = false;
 
         protected override void OnException(Exception ex) {
-            throw new NotImplementedException();
+            ExceptionThrown = true;
         }
 
         protected override Task Delete() {

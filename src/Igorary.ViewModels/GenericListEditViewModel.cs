@@ -18,7 +18,7 @@ namespace Igorary.ViewModels
         }
 
         private async void startReloadingItems() {
-            await reloadItems(0);
+            await reloadItems(-1);
         }
 
         private async Task reloadItems(int newIndex) {
