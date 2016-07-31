@@ -25,9 +25,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Utils", "Igorary.Ut
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Utils.Tests", "..\tests\Igorary.Utils.Tests\Igorary.Utils.Tests.csproj", "{FD036780-3507-4F26-90CD-A4E9E38753EA}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Igorary.Utils.Shared", "Igorary.Utils.Shared\Igorary.Utils.Shared.shproj", "{97A2CCA7-A862-4881-B78E-FB7672E2B3F3}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Igorary.Xaml.Shared\Igorary.Xaml.Shared.projitems*{f7a6a00e-8c50-42a7-89f9-efaa53f0c463}*SharedItemsImports = 4
+		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{97a2cca7-a862-4881-b78e-fb7672e2b3f3}*SharedItemsImports = 13
+		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{c83663fa-c839-4315-9938-29d0a91c1b26}*SharedItemsImports = 4
 		Igorary.Xaml.Shared\Igorary.Xaml.Shared.projitems*{e244578f-c42e-40b0-add0-73a5812f4aa1}*SharedItemsImports = 4
 		Igorary.Xaml.Shared\Igorary.Xaml.Shared.projitems*{eaf0b9a3-7db9-4d7a-aea3-e7b1a3e64719}*SharedItemsImports = 13
 	EndGlobalSection
