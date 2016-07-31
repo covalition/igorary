@@ -7,8 +7,8 @@
     <ProjectGuid>{00DFB9E9-8196-4E13-9D1D-FFA6132AE2AA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Igorary.Utils.Net45</RootNamespace>
-    <AssemblyName>Igorary.Utils.Net45</AssemblyName>
+    <RootNamespace>Igorary.Utils</RootNamespace>
+    <AssemblyName>Igorary.Utils</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

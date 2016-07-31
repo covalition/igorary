@@ -19,5 +19,21 @@ namespace Igorary.Utils.Extensions
                 return source;
             return source < dateTime ? source : dateTime;
         }
+
+        public static DateTime LastDayOfMonth(this DateTime dateTime) {
+            return new DateTime(dateTime.Year, dateTime.Month, DateTime.DaysInMonth(dateTime.Year, dateTime.Month));
+        }
+
+        public static DateTime FirstDayOfMonth(this DateTime dateTime) {
+            return new DateTime(dateTime.Year, dateTime.Month, 1);
+        }
+
+        public static string ToShortDateString(this DateTime? dateTime) {
+#if NET45
+            return dateTime != null ? dateTime.Value.ToShortDateString() : string.Empty;
+#else
+            return dateTime?.ToString("d") ?? string.Empty;
+#endif
+        }
     }
 }
