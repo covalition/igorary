@@ -14,9 +14,10 @@ namespace Igorary.Utils.Tests.Extensions
         [TestMethod]
         public void Max() {
             // arrange
-            DateTime empty = default(DateTime);
-            DateTime a = new DateTime(2004, 07, 15);
-            DateTime b = new DateTime(2016, 06, 06);
+            DateTime? @null = null;
+            DateTime? empty = default(DateTime);
+            DateTime? a = new DateTime(2004, 07, 15);
+            DateTime? b = new DateTime(2016, 06, 06);
 
             // assert
             Assert.AreEqual(a, empty.Max(a));
@@ -24,18 +25,25 @@ namespace Igorary.Utils.Tests.Extensions
 
             Assert.AreEqual(b, b.Max(a));
             Assert.AreEqual(b, a.Max(b));
+
+            Assert.AreEqual(a, @null.Max(a));
+            Assert.AreEqual(a, a.Max(@null));
         }
 
         [TestMethod]
         public void Min() {
             // arrange
-            DateTime empty = default(DateTime);
-            DateTime a = new DateTime(2004, 07, 15);
-            DateTime b = new DateTime(2016, 06, 06);
+            DateTime? @null = null;
+            DateTime? empty = default(DateTime);
+            DateTime? a = new DateTime(2004, 07, 15);
+            DateTime? b = new DateTime(2016, 06, 06);
 
             // assert
             Assert.AreEqual(a, empty.Min(a));
             Assert.AreEqual(a, a.Min(empty));
+
+            Assert.AreEqual(a, @null.Min(a));
+            Assert.AreEqual(a, a.Min(@null));
 
             Assert.AreEqual(a, b.Min(a));
             Assert.AreEqual(a, a.Min(b));
