@@ -54,9 +54,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Igorary.Utils\Igorary.Utils.csproj">
+    <ProjectReference Include="..\..\src\Igorary.Utils\Igorary.Utils.Net46.csproj">
       <Project>{c83663fa-c839-4315-9938-29d0a91c1b26}</Project>
-      <Name>Igorary.Utils</Name>
+      <Name>Igorary.Utils.Net46</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

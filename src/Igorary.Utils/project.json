@@ -1,7 +1,6 @@
 ﻿{
     "supports": {
         "net46.app": { },
-        "net4.app": { },
         "uwp.10.0.app": { }
     },
   "dependencies": {
