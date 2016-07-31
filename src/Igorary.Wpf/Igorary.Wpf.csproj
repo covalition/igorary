@@ -45,6 +45,9 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Igorary.Utils\Properties\VersionInfo.cs">
+      <Link>VersionInfo.cs</Link>
+    </Compile>
     <Compile Include="Controls\FolderTextBox.xaml.cs">
       <DependentUpon>FolderTextBox.xaml</DependentUpon>
     </Compile>
