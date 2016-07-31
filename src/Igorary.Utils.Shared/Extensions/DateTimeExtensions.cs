@@ -29,11 +29,7 @@ namespace Igorary.Utils.Extensions
         }
 
         public static string ToShortDateString(this DateTime? dateTime) {
-#if NET45
-            return dateTime != null ? dateTime.Value.ToShortDateString() : string.Empty;
-#else
-            return dateTime?.ToString("d") ?? string.Empty;
-#endif
+            return dateTime?.ToShortDateString() ?? string.Empty;
         }
     }
 }

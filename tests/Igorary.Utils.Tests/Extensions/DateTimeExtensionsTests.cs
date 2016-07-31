@@ -40,5 +40,31 @@ namespace Igorary.Utils.Tests.Extensions
             Assert.AreEqual(a, b.Min(a));
             Assert.AreEqual(a, a.Min(b));
         }
+
+        [TestMethod]
+        public void LastDayOfMonth() {
+            // arrange
+            DateTime dateTime = new DateTime(2015, 05, 14);
+
+            // act
+            DateTime lastDay = dateTime.LastDayOfMonth();
+
+            // assert
+            Assert.AreEqual(new DateTime(2015, 05, 31), lastDay);
+
+        }
+
+        [TestMethod]
+        public void FirstDayOfMonth() {
+            // arrange
+            DateTime dateTime = new DateTime(2015, 05, 14);
+
+            // act
+            DateTime lastDay = dateTime.FirstDayOfMonth();
+
+            // assert
+            Assert.AreEqual(new DateTime(2015, 05, 1), lastDay);
+
+        }
     }
 }
