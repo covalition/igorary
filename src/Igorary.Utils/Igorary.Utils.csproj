@@ -37,7 +37,7 @@
     <Compile Include="Properties\VersionInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Igorary.Utils.1.0.1.nupkg" />
+    <None Include="Igorary.Utils.nupkg" />
   </ItemGroup>
   <Import Project="..\Igorary.Utils.Shared\Igorary.Utils.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
