@@ -2,7 +2,7 @@
 
 Common bytes for all of covalition's projects
 
-## NuGet
+## NuGet Packages
 
-https://www.nuget.org/packages/Igorary.Utils/
-https://www.nuget.org/packages/Igorary.Forms/
+- https://www.nuget.org/packages/Igorary.Utils/
+- https://www.nuget.org/packages/Igorary.Forms/
