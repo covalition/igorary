@@ -6,13 +6,16 @@
     <SharedGUID>97a2cca7-a862-4881-b78e-fb7672e2b3f3</SharedGUID>
   </PropertyGroup>
   <PropertyGroup Label="Configuration">
-    <Import_RootNamespace>Igorary.Utils.Shared</Import_RootNamespace>
+    <Import_RootNamespace>Igorary.Utils</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DecimalExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ExceptionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\IntExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\LongExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\NullableDecimalExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ObjectExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
   </ItemGroup>
 </Project>
