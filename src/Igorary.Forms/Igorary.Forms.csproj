@@ -35,6 +35,9 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Igorary.Utils\Properties\VersionInfo.cs">
+      <Link>Properties\VersionInfo.cs</Link>
+    </Compile>
     <Compile Include="Components\FileOperations.cs">
       <SubType>Component</SubType>
     </Compile>
