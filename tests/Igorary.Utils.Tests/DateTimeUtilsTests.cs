@@ -13,7 +13,6 @@ namespace Igorary.Utils.Tests
     {
         [TestMethod]
         public void OverlapRange() {
-
             // arrange
             DateTime a = new DateTime(2004, 07, 15);
             DateTime b = new DateTime(2006, 06, 06);
