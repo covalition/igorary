@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Igorary.Utils.Extensions;
+using Covalition.Igorary.Utils.Extensions;
 
 namespace Igorary.Utils.Tests.Extensions
 {
