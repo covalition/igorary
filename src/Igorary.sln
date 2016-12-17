@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.ViewModels", "Igorary.ViewModels\Igorary.ViewModels.csproj", "{F076E99F-68C4-4518-B448-247445B55E40}"
 EndProject
@@ -31,13 +31,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Forms", "Igorary.Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Forms.Tests", "..\tests\Igorary.Forms.Tests\Igorary.Forms.Tests.csproj", "{DC4C0069-A207-489F-A965-1E483253C0FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.Mvc", "Igorary.Mvc\Igorary.Mvc.csproj", "{2E44FEF2-F759-410D-9936-D9F770B3F201}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Igorary.Xaml.Shared\Igorary.Xaml.Shared.projitems*{f7a6a00e-8c50-42a7-89f9-efaa53f0c463}*SharedItemsImports = 4
-		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{97a2cca7-a862-4881-b78e-fb7672e2b3f3}*SharedItemsImports = 13
 		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{2273fa24-9518-49ee-8893-e4b8d55dd692}*SharedItemsImports = 4
+		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{97a2cca7-a862-4881-b78e-fb7672e2b3f3}*SharedItemsImports = 13
 		Igorary.Xaml.Shared\Igorary.Xaml.Shared.projitems*{e244578f-c42e-40b0-add0-73a5812f4aa1}*SharedItemsImports = 4
 		Igorary.Xaml.Shared\Igorary.Xaml.Shared.projitems*{eaf0b9a3-7db9-4d7a-aea3-e7b1a3e64719}*SharedItemsImports = 13
+		Igorary.Xaml.Shared\Igorary.Xaml.Shared.projitems*{f7a6a00e-8c50-42a7-89f9-efaa53f0c463}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -216,6 +218,22 @@ Global
 		{DC4C0069-A207-489F-A965-1E483253C0FE}.Release|x64.Build.0 = Release|Any CPU
 		{DC4C0069-A207-489F-A965-1E483253C0FE}.Release|x86.ActiveCfg = Release|Any CPU
 		{DC4C0069-A207-489F-A965-1E483253C0FE}.Release|x86.Build.0 = Release|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Debug|ARM.Build.0 = Debug|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Debug|x64.Build.0 = Debug|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Debug|x86.Build.0 = Debug|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|ARM.ActiveCfg = Release|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|ARM.Build.0 = Release|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|x64.ActiveCfg = Release|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|x64.Build.0 = Release|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|x86.ActiveCfg = Release|Any CPU
+		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
