@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Igorary.Utils.Extensions
+namespace Covalition.Igorary.Utils.Extensions
 {
     public static class StringExtensions
     {

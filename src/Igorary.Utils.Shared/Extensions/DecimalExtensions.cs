@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Igorary.Utils.Extensions
+namespace Covalition.Igorary.Utils.Extensions
 {
     public static class DecimalExtensions
     {
