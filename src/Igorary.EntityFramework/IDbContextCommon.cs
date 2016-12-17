@@ -14,6 +14,8 @@ namespace Covalition.Igorary.EntityFramework
         /// </summary>
         void UpdateObjectGraph();
 
+        void EnsureNewDatabase();
+
         DbContextTransaction BeginTransaction();
     }
 }

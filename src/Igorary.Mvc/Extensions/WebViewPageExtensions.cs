@@ -14,7 +14,7 @@ namespace Covalition.Igorary.Mvc.Extensions
         /// <summary>
         /// Wersja dla unit testów
         /// </summary>
-        public static IEnumerable<MessageType> GetMessageTypes(TempDataDictionary tempData, ViewDataDictionary viewData, HttpSessionStateBase session, bool useSession) {
+        public static IEnumerable<MessageType> GetMessageTypes(TempDataDictionary tempData, ViewDataDictionary viewData, HttpSessionStateBase session = null, bool useSession = false) {
             List<MessageType> res = getMessages(tempData, session, useSession)
                 .GroupBy(m => m.MessageType)
                 .Select(gr => gr.Key)
@@ -53,7 +53,7 @@ namespace Covalition.Igorary.Mvc.Extensions
         /// <summary>
         /// Wersja dla unit testów
         /// </summary>
-        public static IEnumerable<Message> GetMessages(MessageType messageType, TempDataDictionary tempData, ViewDataDictionary viewData, HttpSessionStateBase session, bool useSession) {
+        public static IEnumerable<Message> GetMessages(MessageType messageType, TempDataDictionary tempData, ViewDataDictionary viewData, HttpSessionStateBase session = null, bool useSession = false) {
             List<Message> res = getMessages(tempData, session, useSession);
             //if (tempData.ContainsKey(CommonController.VIEW_DATA_MESSAGES))
             //    res = (tempData[CommonController.VIEW_DATA_MESSAGES] as List<Message>);
