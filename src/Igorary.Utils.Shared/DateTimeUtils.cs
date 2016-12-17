@@ -16,6 +16,14 @@ namespace Covalition.Igorary.Utils
             return (from2 == null || to1 >= from2) && (to2 == null || (includeEndRange ? from1 <= to2 : from1 < to2));
         }
 
+        /// <summary>
+        /// Liczba godzin części wspólnej dwóch przedziałów
+        /// </summary>
+        /// <param name="from1"></param>
+        /// <param name="to1"></param>
+        /// <param name="from2"></param>
+        /// <param name="to2"></param>
+        /// <returns></returns>
         public static double GetTotalHours(DateTime from1, DateTime to1, DateTime? from2, DateTime? to2) {
             if (from2 != null && from2 > from1)
                 from1 = from2.Value;
@@ -24,6 +32,14 @@ namespace Covalition.Igorary.Utils
             return (to1 - from1).TotalHours;
         }
 
+        /// <summary>
+        /// Stosunek części wspólnej do pierwszego przedziału
+        /// </summary>
+        /// <param name="from1"></param>
+        /// <param name="to1"></param>
+        /// <param name="from2"></param>
+        /// <param name="to2"></param>
+        /// <returns></returns>
         public static double GetFraction(DateTime from1, DateTime to1, DateTime? from2, DateTime? to2) {
             return GetTotalHours(from1, to1, from2, to2) / (to1 - from1).TotalHours;
         }

@@ -3,6 +3,8 @@ using System.Data.Entity;
 
 namespace Covalition.Igorary.EntityFramework
 {
+    public delegate int GetAuthorId();
+
     public interface IDbContextCommon: IDisposable
     {
         DbSet<TEntity> Set<TEntity>() where TEntity : class;
@@ -17,5 +19,7 @@ namespace Covalition.Igorary.EntityFramework
         void EnsureNewDatabase();
 
         DbContextTransaction BeginTransaction();
+
+        GetAuthorId GetAuthorId { get; set; }
     }
 }
