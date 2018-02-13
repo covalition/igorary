@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.ViewModels", "Igorary.ViewModels\Igorary.ViewModels.csproj", "{F076E99F-68C4-4518-B448-247445B55E40}"
 EndProject
@@ -34,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covalition.Igorary.Utils.Tests", "..\tests\Igorary.Utils.Tests\Covalition.Igorary.Utils.Tests.csproj", "{FD036780-3507-4F26-90CD-A4E9E38753EA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covalition.Igorary.Mvc.Tests", "..\tests\Igorary.Mvc.Tests\Covalition.Igorary.Mvc.Tests.csproj", "{F2E55EC5-B11D-410C-8209-C4C61D6E7C9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covalition.Igorary.Utils.NetStandard", "Covalition.Igorary.Utils.NetStandard\Covalition.Igorary.Utils.NetStandard.csproj", "{8DC821DF-8FF8-45AF-A441-327E6C7C734B}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -252,6 +254,22 @@ Global
 		{F2E55EC5-B11D-410C-8209-C4C61D6E7C9A}.Release|x64.Build.0 = Release|Any CPU
 		{F2E55EC5-B11D-410C-8209-C4C61D6E7C9A}.Release|x86.ActiveCfg = Release|Any CPU
 		{F2E55EC5-B11D-410C-8209-C4C61D6E7C9A}.Release|x86.Build.0 = Release|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Debug|ARM.Build.0 = Debug|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Debug|x64.Build.0 = Debug|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Debug|x86.Build.0 = Debug|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Release|ARM.ActiveCfg = Release|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Release|ARM.Build.0 = Release|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Release|x64.ActiveCfg = Release|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Release|x64.Build.0 = Release|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Release|x86.ActiveCfg = Release|Any CPU
+		{8DC821DF-8FF8-45AF-A441-327E6C7C734B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -263,5 +281,8 @@ Global
 		{DC4C0069-A207-489F-A965-1E483253C0FE} = {F0DB31A6-6BE0-44C6-8116-0BCFBBDA15D1}
 		{FD036780-3507-4F26-90CD-A4E9E38753EA} = {F0DB31A6-6BE0-44C6-8116-0BCFBBDA15D1}
 		{F2E55EC5-B11D-410C-8209-C4C61D6E7C9A} = {F0DB31A6-6BE0-44C6-8116-0BCFBBDA15D1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA2EBF1C-5C38-4A3C-8D5E-919483204C7A}
 	EndGlobalSection
 EndGlobal
