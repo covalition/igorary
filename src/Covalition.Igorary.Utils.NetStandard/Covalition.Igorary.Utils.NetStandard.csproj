@@ -6,4 +6,6 @@
     <RootNamespace>Covalition.Igorary.Utils</RootNamespace>
   </PropertyGroup>
 
+  <Import Project="..\Igorary.Utils.Shared\Igorary.Utils.Shared.projitems" Label="Shared" />
+
 </Project>
