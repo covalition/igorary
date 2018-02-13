@@ -4,8 +4,23 @@
     <TargetFrameworks>netstandard2.0;net45;net40</TargetFrameworks>
     <AssemblyName>Covalition.Igorary.Utils</AssemblyName>
     <RootNamespace>Covalition.Igorary.Utils</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Igorary.Utils</PackageId>
+    <Version>1.1-beta</Version>
+    <Authors>covalition</Authors>
+    <Company>covalition</Company>
+    <Copyright>covalition</Copyright>
+    <PackageProjectUrl>https://github.com/covalition/igorary</PackageProjectUrl>
+    <Product>Igorary.Utils</Product>
+    <Description>Common bytes for all of covalition's projects</Description>
+    <PackageTags>utils</PackageTags>
+    <RepositoryUrl>https://github.com/covalition/igorary.git</RepositoryUrl>
   </PropertyGroup>
 
   <Import Project="..\Igorary.Utils.Shared\Igorary.Utils.Shared.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <None Remove="Igorary.Utils.nupkg" />
+  </ItemGroup>
 
 </Project>
