@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)DateTimeUtils.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\CollectionExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DecimalExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ExceptionExtensions.cs" />
