@@ -9,7 +9,7 @@ namespace BlueMirror.Commons.Controls
          protected override System.Windows.Forms.CreateParams CreateParams {
             get {
                 System.Windows.Forms.CreateParams cp = base.CreateParams;
-                cp.Style |= Win32.TVS_NOHSCROLL;
+                // cp.Style |= Win32.TVS_NOHSCROLL;
                 return cp;
             }
         }
