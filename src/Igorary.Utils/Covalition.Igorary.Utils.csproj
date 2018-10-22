@@ -29,6 +29,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>covalition.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
@@ -37,6 +43,7 @@
     <Compile Include="Properties\VersionInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="covalition.pfx" />
     <None Include="Igorary.Utils.nupkg" />
   </ItemGroup>
   <Import Project="..\Igorary.Utils.Shared\Igorary.Utils.Shared.projitems" Label="Shared" />
