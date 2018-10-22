@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("covalition")]
 [assembly: AssemblyProduct("Igorary.Covalition")]
-[assembly: AssemblyCopyright("Copyright © covalition 2016")]
+[assembly: AssemblyCopyright("Copyright © 2016-2018 covalition")]
 
 // Version information for an assembly consists of the following four values:
 //
