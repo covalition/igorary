@@ -37,5 +37,12 @@ namespace Covalition.Igorary.Utils.Extensions
                 result += "$";
             return result;
         }
+
+        /// <summary>
+        /// Returns true when <paramref name="s"/> is null or white space.
+        /// </summary>
+        /// <param name="s"></param>
+        /// <returns></returns>
+        public static bool IsEmpty(this string s) => string.IsNullOrWhiteSpace(s);
     }
 }
