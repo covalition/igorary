@@ -54,10 +54,10 @@ namespace Covalition.Igorary.Mvc.Extensions
 
         public static IHtmlString Table<TModel, TRowType>(this HtmlHelper<TModel> html, IEnumerable<TRowType> rows, string targetId = null, object htmlAttributes = null, string fieldNamePrefix = null, string ajaxUpdateCallbackFunction = null, params WebGridColumn[] commandColumns) {
             WebGrid grid;
-            return Table<TModel, TRowType>(html, rows, targetId, out grid, htmlAttributes, fieldNamePrefix, ajaxUpdateCallbackFunction, commandColumns);
+            return Table(html, rows, targetId, out grid, htmlAttributes, fieldNamePrefix, ajaxUpdateCallbackFunction, commandColumns);
         }
 
-        public static IHtmlString Table<TModel, TRowType>(this HtmlHelper<TModel> html, IEnumerable<TRowType> rows, string targetId, out WebGrid grid, object htmlAttributes= null, string fieldNamePrefix = null, string ajaxUpdateCallbackFunction = null, params WebGridColumn[] commandColumns) {
+        public static IHtmlString Table<TModel, TRowType>(this HtmlHelper<TModel> html, IEnumerable<TRowType> rows, string targetId, out WebGrid grid, object htmlAttributes = null, string fieldNamePrefix = null, string ajaxUpdateCallbackFunction = null, params WebGridColumn[] commandColumns) {
             ModelMetadata rowMetadata = ModelMetadataProviders.Current.GetMetadataForType(null, typeof(TRowType));
             List<WebGridColumn> columns = rowMetadata.Properties
                 .Where(p => p.ShowForDisplay)
