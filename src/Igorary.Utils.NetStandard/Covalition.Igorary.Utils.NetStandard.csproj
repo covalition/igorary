@@ -6,7 +6,7 @@
     <RootNamespace>Covalition.Igorary.Utils</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Igorary.Utils</PackageId>
-    <Version>1.2-beta</Version>
+    <Version>1.2</Version>
     <Authors>covalition</Authors>
     <Company>covalition</Company>
     <Copyright>covalition</Copyright>
