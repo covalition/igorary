@@ -44,5 +44,17 @@ namespace Covalition.Igorary.Utils.Extensions
         /// <param name="s"></param>
         /// <returns></returns>
         public static bool IsEmpty(this string s) => string.IsNullOrWhiteSpace(s);
+
+        public static string ReplaceLast(this string s, string oldValue, string newValue) {
+            if (oldValue?.Length > 0)
+            {
+                int i = s.LastIndexOf(oldValue);
+                if (i >= 0)
+                    return s.Remove(i, oldValue.Length).Insert(i, newValue);
+            }
+            if (s == oldValue) // s.Length == oldValue.Length == 0
+                return newValue;
+            return s;
+        }
     }
 }

@@ -68,11 +68,27 @@ namespace Igorary.Utils.Tests.Extensions
             DateTime dateTime = new DateTime(2015, 05, 14);
 
             // act
-            DateTime lastDay = dateTime.FirstDayOfMonth();
+            DateTime firstDay = dateTime.FirstDayOfMonth();
 
             // assert
-            Assert.AreEqual(new DateTime(2015, 05, 1), lastDay);
+            Assert.AreEqual(new DateTime(2015, 05, 1), firstDay);
 
+        }
+
+        [TestMethod]
+        public void RoundSeconds() {
+            // arrange
+            DateTime dateTime1 = new DateTime(2015, 05, 14, 1, 15, 33, 211);
+            DateTime dateTime2 = new DateTime(2015, 05, 14, 1, 15, 33, 0);
+
+            // act
+            DateTime res1 = dateTime1.RoundSeconds();
+            DateTime res2 = dateTime2.RoundSeconds();
+
+            // assert
+            DateTime res = new DateTime(2015, 05, 14, 1, 15, 33, 0);
+            Assert.AreEqual(res, res1);
+            Assert.AreEqual(res, res2);
         }
     }
 }

@@ -27,5 +27,9 @@ namespace Covalition.Igorary.Utils.Extensions
         public static string ToShortDateString(this DateTime? dateTime) {
             return dateTime?.ToShortDateString() ?? string.Empty;
         }
+
+        public static DateTime RoundSeconds(this DateTime dt) {
+            return new DateTime(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Kind);
+        }
     }
 }
