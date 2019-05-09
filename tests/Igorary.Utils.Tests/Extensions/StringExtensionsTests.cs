@@ -23,13 +23,14 @@ namespace Igorary.Utils.Tests.Extensions
 
         [DataTestMethod]
         [DataRow("test string", "string", "new", "test new")]
+        [DataRow("teststring", "string", "", "test")]
         [DataRow("test string", "", "new", "test string")]
         [DataRow("test test test test", "test", "new", "test test test new")]
         [DataRow("test test test test", "test2", "new", "test test test test")]
         [DataRow("test test test new", "test", "new", "test test new new")]
         [DataRow("", "", "new", "new")]
         [DataRow("", "test", "new", "")]
-        [DataRow("boo", "boo", "foo", "foo")]
+        [DataRow("test", "test", "new", "new")]
         public void ReplaceLast(string input, string oldValue, string newValue, string output) {
             Assert.AreEqual(output, input.ReplaceLast(oldValue, newValue));
         }
