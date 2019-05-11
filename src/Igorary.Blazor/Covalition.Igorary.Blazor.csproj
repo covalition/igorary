@@ -2,6 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>Igorary.Blazor</PackageId>
+    <Authors>covalition</Authors>
+    <Product>Igorary.Blazor</Product>
+    <Description>Common bytes for all of covalition's Blazor projects</Description>
+    <Copyright>covalition</Copyright>
+    <PackageProjectUrl>https://github.com/covalition/igorary</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/covalition/igorary.git</RepositoryUrl>
+    <PackageTags>utils</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
