@@ -35,5 +35,30 @@ namespace Igorary.Utils.Tests.Extensions
             Assert.AreEqual(output, input.ReplaceLast(oldValue, newValue));
         }
 
-     }
+        [DataTestMethod]
+        [DataRow("testString", "Test String")]
+        [DataRow("TestString", "Test String")]
+        [DataRow("", "")]
+        [DataRow("TodayILiveInTheUSAWithSimon", "Today I Live In The USA With Simon")]
+        [DataRow("String", "String")]
+        [DataRow("string", "String")]
+        [DataRow("S", "S")]
+        public void ToTile(string input, string output) {
+            Assert.AreEqual(output, input.ToTitle());
+        }
+
+        [DataTestMethod]
+        [DataRow("testString", "test-string")]
+        [DataRow("TestString", "test-string")]
+        [DataRow("TestStringX", "test-string-x")]
+        [DataRow("", "")]
+        // [DataRow("TodayILiveInTheUSAWithSimon", "Today I Live In The USA With Simon")]
+        [DataRow("String", "string")]
+        [DataRow("string", "string")]
+        [DataRow("S", "s")]
+        public void ToIdentifierWithHyphens(string input, string output) {
+            Assert.AreEqual(output, input.ToIdentifierWithHyphens());
+        }
+
+    }
 }

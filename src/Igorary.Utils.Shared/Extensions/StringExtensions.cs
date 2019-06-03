@@ -1,9 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace Covalition.Igorary.Utils.Extensions
 {
+    public enum ConvertTo
+    {
+        Upper, Lower
+    }
+
     public static class StringExtensions
     {
         /// <summary>
@@ -55,6 +62,29 @@ namespace Covalition.Igorary.Utils.Extensions
             if (s == oldValue) // s.Length == oldValue.Length == 0
                 return newValue;
             return s;
+        }
+
+        public static string FirstLetterTo(this string s, ConvertTo convertTo) {
+            if (s == null)
+                return null;
+            if (s.Length > 1)
+                return (convertTo == ConvertTo.Upper? char.ToUpper(s[0]): char.ToLower(s[0])) + s.Substring(1);
+            return convertTo == ConvertTo.Upper ? s.ToUpper() : s.ToLower();
+        }
+
+        public static string[] SplitCamelCase(this string s) {
+            return Regex.Split(s, @"
+                (?<=[A-Z])(?=[A-Z][a-z]) |
+                 (?<=[^A-Z])(?=[A-Z]) |
+                 (?<=[A-Za-z])(?=[^A-Za-z])", RegexOptions.IgnorePatternWhitespace);
+        }
+
+        public static string ToTitle(this string s) {
+            return string.Join(" ", s.SplitCamelCase().Select(w => w.FirstLetterTo(ConvertTo.Upper)));
+        }
+
+        public static string ToIdentifierWithHyphens(this string s) {
+            return string.Join("-", s.SplitCamelCase().Select(w => w.FirstLetterTo(ConvertTo.Lower)));
         }
     }
 }
