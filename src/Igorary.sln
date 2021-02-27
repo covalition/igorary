@@ -42,6 +42,7 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{2273fa24-9518-49ee-8893-e4b8d55dd692}*SharedItemsImports = 4
+		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{317d3e8a-3304-49fc-b606-a155a60207b0}*SharedItemsImports = 5
 		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{97a2cca7-a862-4881-b78e-fb7672e2b3f3}*SharedItemsImports = 13
 		Igorary.Xaml.Shared\Igorary.Xaml.Shared.projitems*{e244578f-c42e-40b0-add0-73a5812f4aa1}*SharedItemsImports = 4
 		Igorary.Xaml.Shared\Igorary.Xaml.Shared.projitems*{eaf0b9a3-7db9-4d7a-aea3-e7b1a3e64719}*SharedItemsImports = 13
