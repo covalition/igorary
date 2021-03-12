@@ -14,6 +14,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DecimalExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ExceptionExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\IDictionaryExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\IntExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\LongExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\NullableDecimalExtensions.cs" />
