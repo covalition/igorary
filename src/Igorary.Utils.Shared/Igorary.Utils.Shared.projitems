@@ -13,6 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\CollectionExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DateTimeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DecimalExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\EnumExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ExceptionExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\IDictionaryExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\IntExtensions.cs" />

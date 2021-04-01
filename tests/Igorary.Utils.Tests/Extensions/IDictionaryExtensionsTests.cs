@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Igorary.Utils.Tests.Extensions
 {
     [TestClass]
-    public class IDictionaryExtensionsTest
+    public class IDictionaryExtensionsTests
     {
         [TestMethod]
         public void Find()
