@@ -1,4 +1,4 @@
-﻿namespace Covalition.Igorary.Utils.Extensions
+﻿namespace Igorary.Utils.Extensions
 {
     public static class NullableDecimalExtensions
     {
