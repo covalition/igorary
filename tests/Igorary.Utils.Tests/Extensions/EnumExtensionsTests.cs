@@ -21,7 +21,9 @@ namespace Igorary.Utils.Tests.Extensions
             A,
 
             [Display(Name = BTestName)]
-            B
+            B,
+
+            C
         }
 
         [TestMethod]
@@ -30,6 +32,13 @@ namespace Igorary.Utils.Tests.Extensions
             // assert
             Assert.AreEqual(ATestName, Test.A.GetDisplayName());
             Assert.AreEqual(BTestName, Test.B.GetDisplayName());
+        }
+
+        [TestMethod]
+        public void In()
+        {
+            Assert.IsTrue(Test.A.In(Test.A, Test.B));
+            Assert.IsFalse(Test.C.In(Test.A, Test.B));
         }
     }
 }

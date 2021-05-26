@@ -17,5 +17,9 @@ namespace Igorary.Utils.Extensions
                 .GetCustomAttribute<DisplayAttribute>()
                 .GetName();
         }
+
+        public static bool In<T>(this T enumValue, params T[] enumSet) where T: Enum {
+            return enumSet.Contains(enumValue);
+        }
     }
 }
