@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Covalition.Igorary.Utils
+namespace Igorary.Utils
 {
     public static class DateTimeUtils
     {

@@ -1,10 +1,6 @@
-﻿using Covalition.Igorary.Utils.Extensions;
+﻿using Igorary.Utils.Extensions;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Igorary.Utils.Tests.Extensions
 {
@@ -12,7 +8,8 @@ namespace Igorary.Utils.Tests.Extensions
     public class StringExtensionsTests
     {
         [TestMethod]
-        public void IsEmpty() {
+        public void IsEmpty()
+        {
             string s1 = null, s2 = "", s3 = " ", s4 = "a";
 
             Assert.AreEqual(true, s1.IsEmpty());
@@ -31,7 +28,8 @@ namespace Igorary.Utils.Tests.Extensions
         [DataRow("", "", "new", "new")]
         [DataRow("", "test", "new", "")]
         [DataRow("test", "test", "new", "new")]
-        public void ReplaceLast(string input, string oldValue, string newValue, string output) {
+        public void ReplaceLast(string input, string oldValue, string newValue, string output)
+        {
             Assert.AreEqual(output, input.ReplaceLast(oldValue, newValue));
         }
 
@@ -43,7 +41,8 @@ namespace Igorary.Utils.Tests.Extensions
         [DataRow("String", "String")]
         [DataRow("string", "String")]
         [DataRow("S", "S")]
-        public void ToTile(string input, string output) {
+        public void ToTile(string input, string output)
+        {
             Assert.AreEqual(output, input.ToTitle());
         }
 
@@ -56,8 +55,19 @@ namespace Igorary.Utils.Tests.Extensions
         [DataRow("String", "string")]
         [DataRow("string", "string")]
         [DataRow("S", "s")]
-        public void ToIdentifierWithHyphens(string input, string output) {
+        public void ToIdentifierWithHyphens(string input, string output)
+        {
             Assert.AreEqual(output, input.ToIdentifierWithHyphens());
+        }
+
+        [DataTestMethod]
+        [DataRow("testString", 100, null, "testString")]
+        [DataRow("testString", 4, "...", "test...")]
+        [DataRow(null, 100, null, null)]
+        [DataRow("testString", 4, null, "test")]
+        public void Truncate(string input, int maxLenght, string ending, string output)
+        {
+            Assert.AreEqual(output, input.Truncate(maxLenght, ending));
         }
 
     }

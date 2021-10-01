@@ -7,7 +7,7 @@
     <ProjectGuid>{2273FA24-9518-49EE-8893-E4B8D55DD692}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Covalition.Igorary.Utils</RootNamespace>
+    <RootNamespace>Igorary.Utils</RootNamespace>
     <AssemblyName>Covalition.Igorary.Utils</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

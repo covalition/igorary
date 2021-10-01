@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Covalition.Igorary.Utils.Extensions
+namespace Igorary.Utils.Extensions
 {
     public enum ConvertTo
     {
@@ -85,6 +85,16 @@ namespace Covalition.Igorary.Utils.Extensions
 
         public static string ToIdentifierWithHyphens(this string s) {
             return string.Join("-", s.SplitCamelCase().Select(w => w.FirstLetterTo(ConvertTo.Lower)));
+        }
+
+        public static string Truncate(this string s, int maxLength, string ending = null)
+        {
+            if (s == null || s.Length <= maxLength)
+                return s;
+
+            string truncatedString = s.Substring(0, maxLength);
+
+            return ending == null ? truncatedString : truncatedString + ending;
         }
     }
 }

@@ -1,7 +1,8 @@
 ﻿using System;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-using static Covalition.Igorary.Utils.DateTimeUtils;
+using static Igorary.Utils.DateTimeUtils;
 
 namespace Igorary.Utils.Tests
 {
@@ -9,7 +10,8 @@ namespace Igorary.Utils.Tests
     public class DateTimeUtilsTests
     {
         [TestMethod]
-        public void TestOverlapRange_1() {
+        public void TestOverlapRange_1()
+        {
             // arrange
             DateTime a = new DateTime(2004, 07, 15);
             DateTime b = new DateTime(2006, 06, 06);
@@ -22,7 +24,8 @@ namespace Igorary.Utils.Tests
         }
 
         [TestMethod]
-        public void TestOverlapRange_2() {
+        public void TestOverlapRange_2()
+        {
             // arrange
             DateTime from1_1 = new DateTime(1999, 12, 1);
             DateTime to1_1 = new DateTime(2000, 1, 2);
@@ -46,7 +49,8 @@ namespace Igorary.Utils.Tests
         }
 
         [TestMethod]
-        public void TestGetTotalHours_0() {
+        public void TestGetTotalHours_0()
+        {
             // arrange
             DateTime a = new DateTime(2004, 07, 15);
             DateTime b = new DateTime(2004, 07, 15);
@@ -56,7 +60,8 @@ namespace Igorary.Utils.Tests
         }
 
         [TestMethod]
-        public void TestGetTotalHours_1() {
+        public void TestGetTotalHours_1()
+        {
             // arrange
             DateTime from1_1 = new DateTime(1999, 12, 1);
             DateTime to1_1 = new DateTime(2000, 1, 2);
@@ -66,7 +71,8 @@ namespace Igorary.Utils.Tests
         }
 
         [TestMethod]
-        public void TestGetFraction() {
+        public void TestGetFraction()
+        {
             // arrange
             DateTime from1_1 = new DateTime(2000, 1, 2);
             DateTime to1_1 = new DateTime(2000, 1, 4);

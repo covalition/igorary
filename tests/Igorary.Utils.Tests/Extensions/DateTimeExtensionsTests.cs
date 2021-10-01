@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+using Igorary.Utils.Extensions;
+
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Covalition.Igorary.Utils.Extensions;
 
 namespace Igorary.Utils.Tests.Extensions
 {
@@ -12,7 +11,8 @@ namespace Igorary.Utils.Tests.Extensions
     public class DateTimeExtensionsTests
     {
         [TestMethod]
-        public void Max() {
+        public void Max()
+        {
             // arrange
             DateTime? @null = null;
             DateTime? empty = default(DateTime);
@@ -31,7 +31,8 @@ namespace Igorary.Utils.Tests.Extensions
         }
 
         [TestMethod]
-        public void Min() {
+        public void Min()
+        {
             // arrange
             DateTime? @null = null;
             DateTime? empty = default(DateTime);
@@ -50,7 +51,8 @@ namespace Igorary.Utils.Tests.Extensions
         }
 
         [TestMethod]
-        public void LastDayOfMonth() {
+        public void LastDayOfMonth()
+        {
             // arrange
             DateTime dateTime = new DateTime(2015, 05, 14);
 
@@ -63,7 +65,8 @@ namespace Igorary.Utils.Tests.Extensions
         }
 
         [TestMethod]
-        public void FirstDayOfMonth() {
+        public void FirstDayOfMonth()
+        {
             // arrange
             DateTime dateTime = new DateTime(2015, 05, 14);
 
@@ -76,7 +79,8 @@ namespace Igorary.Utils.Tests.Extensions
         }
 
         [TestMethod]
-        public void RoundSeconds() {
+        public void RoundSeconds()
+        {
             // arrange
             DateTime dateTime1 = new DateTime(2015, 05, 14, 1, 15, 33, 211);
             DateTime dateTime2 = new DateTime(2015, 05, 14, 1, 15, 33, 0);

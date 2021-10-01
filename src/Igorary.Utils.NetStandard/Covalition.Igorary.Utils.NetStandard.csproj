@@ -1,12 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net45;net40</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net45;netcoreapp3.1</TargetFrameworks>
     <AssemblyName>Covalition.Igorary.Utils</AssemblyName>
-    <RootNamespace>Covalition.Igorary.Utils</RootNamespace>
+    <RootNamespace>Igorary.Utils</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Igorary.Utils</PackageId>
-    <Version>1.2.0.1</Version>
+    <Version>1.2.0.5</Version>
     <Authors>covalition</Authors>
     <Company>covalition</Company>
     <Copyright>covalition</Copyright>
@@ -15,14 +15,18 @@
     <Description>Common bytes for all of covalition's projects</Description>
     <PackageTags>utils</PackageTags>
     <RepositoryUrl>https://github.com/covalition/igorary.git</RepositoryUrl>
-    <AssemblyVersion>1.2.0.1</AssemblyVersion>
-    <FileVersion>1.2.0.1</FileVersion>
+    <AssemblyVersion>1.2.0.5</AssemblyVersion>
+    <FileVersion>1.2.0.5</FileVersion>
   </PropertyGroup>
 
   <Import Project="..\Igorary.Utils.Shared\Igorary.Utils.Shared.projitems" Label="Shared" />
 
   <ItemGroup>
     <None Remove="Igorary.Utils.nupkg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
