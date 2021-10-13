@@ -35,6 +35,13 @@ namespace Igorary.Utils.Tests.Extensions
         }
 
         [TestMethod]
+        public void GetDisplayNameForInvalidEnum()
+        {
+            // assert
+            Assert.AreEqual("5", ((Test)5).GetDisplayName());
+        }
+
+        [TestMethod]
         public void In()
         {
             Assert.IsTrue(Test.A.In(Test.A, Test.B));

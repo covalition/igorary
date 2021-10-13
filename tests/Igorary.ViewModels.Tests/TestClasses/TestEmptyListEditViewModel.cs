@@ -13,12 +13,12 @@ namespace Igorary.ViewModels.Tests.TestClasses
             throw new NotImplementedException();
         }
 
-        protected override async Task<List<LabeledFieldViewModel>> LoadFields() {
-            return new List<LabeledFieldViewModel>();
+        protected override Task<List<LabeledFieldViewModel>> LoadFields() {
+            return Task.FromResult(new List<LabeledFieldViewModel>());
         }
 
-        protected override async Task<IEnumerable<TestListItemViewModel>> LoadItems() {
-            return new List<TestListItemViewModel>();
+        protected override Task<IEnumerable<TestListItemViewModel>> LoadItems() {
+            return Task.FromResult(new List<TestListItemViewModel>() as IEnumerable<TestListItemViewModel>);
         }
 
         protected override Task<int> Save() {
