@@ -60,12 +60,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Igorary.Forms\Igorary.Forms.csproj">
-      <Project>{93e7cddc-d960-4568-8191-282f48921d39}</Project>
-      <Name>Igorary.Forms</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Choose>

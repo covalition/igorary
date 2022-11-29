@@ -127,10 +127,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Igorary.UWP\Igorary.Uwp.csproj">
-      <Project>{f7a6a00e-8c50-42a7-89f9-efaa53f0c463}</Project>
-      <Name>Igorary.Uwp</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\src\Igorary.ViewModels\Igorary.ViewModels.csproj">
       <Project>{f076e99f-68c4-4518-b448-247445b55e40}</Project>
       <Name>Igorary.ViewModels</Name>
