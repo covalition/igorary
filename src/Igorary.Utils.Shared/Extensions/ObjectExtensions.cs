@@ -1,4 +1,7 @@
-﻿namespace Igorary.Utils.Extensions
+﻿// ObjectExtensions.cs
+// Copyright (c) 2023 Covalition. All rights reserved.
+
+namespace Igorary.Utils.Extensions
 {
     public static class ObjectExtensions
     {
@@ -8,7 +11,8 @@
         /// <param name="source">The source object</param>
         /// <param name="propName">Property name</param>
         /// <returns></returns>
-        public static object GetPropValue(this object source, string propName) {
+        public static object GetPropValue(this object source, string propName)
+        {
             return source.GetType().GetProperty(propName).GetValue(source, null);
         }
     }

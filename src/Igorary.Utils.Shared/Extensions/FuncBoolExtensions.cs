@@ -1,4 +1,7 @@
-﻿using System;
+﻿// FuncBoolExtensions.cs
+// Copyright (c) 2023 Covalition. All rights reserved.
+
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -8,7 +11,7 @@ namespace Igorary.Utils.Extensions
     {
         public static async Task WaitForIt(this Func<bool> condition, int frequency = 25, int milisecondsTimeout = -1, CancellationToken cancellationToken = new CancellationToken())
         {
-            var waitTask = Task.Run(async () =>
+            Task waitTask = Task.Run(async () =>
             {
                 while (!condition())
                     await Task.Delay(frequency, cancellationToken);

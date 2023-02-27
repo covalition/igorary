@@ -22,5 +22,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\NullableDecimalExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\ObjectExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Timer\ITimer.cs" />
   </ItemGroup>
 </Project>

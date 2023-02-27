@@ -1,14 +1,19 @@
-﻿using System;
+﻿// DateTimeExtensions.cs
+// Copyright (c) 2023 Covalition. All rights reserved.
+
+using System;
 
 namespace Igorary.Utils.Extensions
 {
     public static class DateTimeExtensions
     {
-        public static DateTime? Max(this DateTime? source, DateTime? dateTime) {
+        public static DateTime? Max(this DateTime? source, DateTime? dateTime)
+        {
             return Nullable.Compare(source, dateTime) > 0 ? source : dateTime;
         }
 
-        public static DateTime? Min(this DateTime? source, DateTime? dateTime) {
+        public static DateTime? Min(this DateTime? source, DateTime? dateTime)
+        {
             if (source == null || source == default(DateTime))
                 return dateTime;
             if (dateTime == null || dateTime == default(DateTime))
@@ -16,19 +21,23 @@ namespace Igorary.Utils.Extensions
             return source < dateTime ? source : dateTime;
         }
 
-        public static DateTime LastDayOfMonth(this DateTime dateTime) {
+        public static DateTime LastDayOfMonth(this DateTime dateTime)
+        {
             return new DateTime(dateTime.Year, dateTime.Month, DateTime.DaysInMonth(dateTime.Year, dateTime.Month));
         }
 
-        public static DateTime FirstDayOfMonth(this DateTime dateTime) {
+        public static DateTime FirstDayOfMonth(this DateTime dateTime)
+        {
             return new DateTime(dateTime.Year, dateTime.Month, 1);
         }
 
-        public static string ToShortDateString(this DateTime? dateTime) {
+        public static string ToShortDateString(this DateTime? dateTime)
+        {
             return dateTime?.ToShortDateString() ?? string.Empty;
         }
 
-        public static DateTime RoundSeconds(this DateTime dt) {
+        public static DateTime RoundSeconds(this DateTime dt)
+        {
             return new DateTime(dt.Year, dt.Month, dt.Day, dt.Hour, dt.Minute, dt.Second, dt.Kind);
         }
     }

@@ -1,4 +1,7 @@
-﻿using System;
+﻿// StringExtensions.cs
+// Copyright (c) 2023 Covalition. All rights reserved.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,16 +21,19 @@ namespace Igorary.Utils.Extensions
         /// </summary>
         /// <param name="wildcard"></param>
         /// <returns></returns>
-        public static string ToRegex(this string wildcard, bool treatFileMaskAsWildcard) {
+        public static string ToRegex(this string wildcard, bool treatFileMaskAsWildcard)
+        {
             string result = "^";
             if (treatFileMaskAsWildcard) // na początku wstaw odpowiednik *
                 result += ".*";
-            foreach (char c in wildcard) {
+            foreach (char c in wildcard)
+            {
                 if (c == '*')
                     result += ".*";
                 else if (c == '?')
                     result += ".";
-                else if (c == ';') {
+                else if (c == ';')
+                {
                     if (treatFileMaskAsWildcard)
                         result += ".*$|^.*";
                     else
@@ -50,9 +56,13 @@ namespace Igorary.Utils.Extensions
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
-        public static bool IsEmpty(this string s) => string.IsNullOrWhiteSpace(s);
+        public static bool IsEmpty(this string s)
+        {
+            return string.IsNullOrWhiteSpace(s);
+        }
 
-        public static string ReplaceLast(this string s, string oldValue, string newValue) {
+        public static string ReplaceLast(this string s, string oldValue, string newValue)
+        {
             if (oldValue?.Length > 0)
             {
                 int i = s.LastIndexOf(oldValue);
@@ -64,26 +74,30 @@ namespace Igorary.Utils.Extensions
             return s;
         }
 
-        public static string FirstLetterTo(this string s, ConvertTo convertTo) {
+        public static string FirstLetterTo(this string s, ConvertTo convertTo)
+        {
             if (s == null)
                 return null;
             if (s.Length > 1)
-                return (convertTo == ConvertTo.Upper? char.ToUpper(s[0]): char.ToLower(s[0])) + s.Substring(1);
+                return (convertTo == ConvertTo.Upper ? char.ToUpper(s[0]) : char.ToLower(s[0])) + s.Substring(1);
             return convertTo == ConvertTo.Upper ? s.ToUpper() : s.ToLower();
         }
 
-        public static string[] SplitCamelCase(this string s) {
+        public static string[] SplitCamelCase(this string s)
+        {
             return Regex.Split(s, @"
                 (?<=[A-Z])(?=[A-Z][a-z]) |
                  (?<=[^A-Z])(?=[A-Z]) |
                  (?<=[A-Za-z])(?=[^A-Za-z])", RegexOptions.IgnorePatternWhitespace);
         }
 
-        public static string ToTitle(this string s) {
+        public static string ToTitle(this string s)
+        {
             return string.Join(" ", s.SplitCamelCase().Select(w => w.FirstLetterTo(ConvertTo.Upper)));
         }
 
-        public static string ToIdentifierWithHyphens(this string s) {
+        public static string ToIdentifierWithHyphens(this string s)
+        {
             return string.Join("-", s.SplitCamelCase().Select(w => w.FirstLetterTo(ConvertTo.Lower)));
         }
 

@@ -1,4 +1,7 @@
-﻿using System;
+﻿// IDictionaryExtensions.cs
+// Copyright (c) 2023 Covalition. All rights reserved.
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,7 +17,7 @@ namespace Igorary.Utils.Extensions
         /// <param name="dictionary"></param>
         /// <param name="key">The key of the element to get.</param>
         /// <returns>The element with the specified key or null.</returns>
-        public static TValue Find<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key) where TValue: class
+        public static TValue Find<TKey, TValue>(this IDictionary<TKey, TValue> dictionary, TKey key) where TValue : class
         {
             if (dictionary.TryGetValue(key, out TValue value))
                 return value;

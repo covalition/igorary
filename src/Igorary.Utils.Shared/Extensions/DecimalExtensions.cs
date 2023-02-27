@@ -1,4 +1,7 @@
-﻿using System;
+﻿// DecimalExtensions.cs
+// Copyright (c) 2023 Covalition. All rights reserved.
+
+using System;
 
 namespace Igorary.Utils.Extensions
 {
@@ -9,7 +12,8 @@ namespace Igorary.Utils.Extensions
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public static decimal Round2(this decimal d) {
+        public static decimal Round2(this decimal d)
+        {
             return Math.Round(d, 2, MidpointRounding.AwayFromZero);
         }
 
@@ -18,7 +22,8 @@ namespace Igorary.Utils.Extensions
         /// </summary>
         /// <param name="d"></param>
         /// <returns></returns>
-        public static decimal Round4(this decimal d) {
+        public static decimal Round4(this decimal d)
+        {
             return Math.Round(d, 4, MidpointRounding.AwayFromZero);
         }
     }

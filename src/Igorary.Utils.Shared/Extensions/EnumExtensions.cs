@@ -1,4 +1,7 @@
-﻿using System;
+﻿// EnumExtensions.cs
+// Copyright (c) 2023 Covalition. All rights reserved.
+
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Reflection;
