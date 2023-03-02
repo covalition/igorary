@@ -3,9 +3,10 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
 
 namespace Igorary.Utils.Extensions
 {
@@ -109,6 +110,32 @@ namespace Igorary.Utils.Extensions
             string truncatedString = s.Substring(0, maxLength);
 
             return ending == null ? truncatedString : truncatedString + ending;
+        }
+
+        public static T DeserializeXml<T>(this string toDeserialize)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(T));
+            using (StringReader textReader = new StringReader(toDeserialize))
+            {
+                return (T)xmlSerializer.Deserialize(textReader);
+            }
+        }
+
+        public static string ToNullIfEmpty(this string s)
+        {
+            return s.IsEmpty() ? null : s;
+        }
+
+        public static IEnumerable<string> SplitBy(this string source, int maxChunkSize)
+        {
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+
+            if (maxChunkSize < 1)
+                throw new ArgumentException("Value is less than 1.", nameof(maxChunkSize));
+
+            for (int i = 0; i < source.Length; i += maxChunkSize)
+                yield return source.Substring(i, Math.Min(maxChunkSize, source.Length - i));
         }
     }
 }

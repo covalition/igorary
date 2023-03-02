@@ -70,5 +70,14 @@ namespace Igorary.Utils.Tests.Extensions
             Assert.AreEqual(output, input.Truncate(maxLenght, ending));
         }
 
+        [TestMethod]
+        [DataRow("testString", "testString")]
+        [DataRow("", null)]
+        [DataRow(null, null)]
+        public void ToNullIfEmptyTest(string input, string output)
+        {
+            Assert.AreEqual(output, input.ToNullIfEmpty());
+        }
+
     }
 }

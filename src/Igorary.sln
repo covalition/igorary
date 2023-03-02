@@ -13,8 +13,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Igorary.Xaml.Shared", "Igor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFApp", "..\samples\WPFApp\WPFApp.csproj", "{FCDEAED4-5B0C-4E54-A826-BE9482E8AE4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UWPApp", "..\samples\UWPApp\UWPApp.csproj", "{4D562FF6-38E6-4222-AE65-12E7F21A623D}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F0DB31A6-6BE0-44C6-8116-0BCFBBDA15D1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Igorary.ViewModels.Tests", "..\tests\Igorary.ViewModels.Tests\Igorary.ViewModels.Tests.csproj", "{124D42F8-7408-44F4-A5EE-819727816331}"
@@ -22,8 +20,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covalition.Igorary.Mvc", "Igorary.Mvc\Covalition.Igorary.Mvc.csproj", "{2E44FEF2-F759-410D-9936-D9F770B3F201}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Covalition.Igorary.Utils.Shared", "Igorary.Utils.Shared\Covalition.Igorary.Utils.Shared.shproj", "{97A2CCA7-A862-4881-B78E-FB7672E2B3F3}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covalition.Igorary.Utils", "Igorary.Utils\Covalition.Igorary.Utils.csproj", "{2273FA24-9518-49EE-8893-E4B8D55DD692}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Covalition.Igorary.Utils.Tests", "..\tests\Igorary.Utils.Tests\Covalition.Igorary.Utils.Tests.csproj", "{FD036780-3507-4F26-90CD-A4E9E38753EA}"
 EndProject
@@ -93,28 +89,6 @@ Global
 		{FCDEAED4-5B0C-4E54-A826-BE9482E8AE4D}.Release|x64.Build.0 = Release|Any CPU
 		{FCDEAED4-5B0C-4E54-A826-BE9482E8AE4D}.Release|x86.ActiveCfg = Release|Any CPU
 		{FCDEAED4-5B0C-4E54-A826-BE9482E8AE4D}.Release|x86.Build.0 = Release|Any CPU
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|Any CPU.Build.0 = Debug|x86
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|Any CPU.Deploy.0 = Debug|x86
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|ARM.ActiveCfg = Debug|ARM
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|ARM.Build.0 = Debug|ARM
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|ARM.Deploy.0 = Debug|ARM
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|x64.ActiveCfg = Debug|x64
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|x64.Build.0 = Debug|x64
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|x64.Deploy.0 = Debug|x64
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|x86.ActiveCfg = Debug|x86
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|x86.Build.0 = Debug|x86
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Debug|x86.Deploy.0 = Debug|x86
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Release|Any CPU.ActiveCfg = Release|x86
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Release|ARM.ActiveCfg = Release|ARM
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Release|ARM.Build.0 = Release|ARM
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Release|ARM.Deploy.0 = Release|ARM
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Release|x64.ActiveCfg = Release|x64
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Release|x64.Build.0 = Release|x64
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Release|x64.Deploy.0 = Release|x64
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Release|x86.ActiveCfg = Release|x86
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Release|x86.Build.0 = Release|x86
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D}.Release|x86.Deploy.0 = Release|x86
 		{124D42F8-7408-44F4-A5EE-819727816331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{124D42F8-7408-44F4-A5EE-819727816331}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{124D42F8-7408-44F4-A5EE-819727816331}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -147,22 +121,6 @@ Global
 		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|x64.Build.0 = Release|Any CPU
 		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|x86.ActiveCfg = Release|Any CPU
 		{2E44FEF2-F759-410D-9936-D9F770B3F201}.Release|x86.Build.0 = Release|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Debug|ARM.Build.0 = Debug|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Debug|x64.Build.0 = Debug|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Debug|x86.Build.0 = Debug|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Release|ARM.ActiveCfg = Release|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Release|ARM.Build.0 = Release|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Release|x64.ActiveCfg = Release|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Release|x64.Build.0 = Release|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Release|x86.ActiveCfg = Release|Any CPU
-		{2273FA24-9518-49EE-8893-E4B8D55DD692}.Release|x86.Build.0 = Release|Any CPU
 		{FD036780-3507-4F26-90CD-A4E9E38753EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FD036780-3507-4F26-90CD-A4E9E38753EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD036780-3507-4F26-90CD-A4E9E38753EA}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -233,7 +191,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FCDEAED4-5B0C-4E54-A826-BE9482E8AE4D} = {47DD01CE-93EC-4DAC-925A-68BD48B3ECEB}
-		{4D562FF6-38E6-4222-AE65-12E7F21A623D} = {47DD01CE-93EC-4DAC-925A-68BD48B3ECEB}
 		{124D42F8-7408-44F4-A5EE-819727816331} = {F0DB31A6-6BE0-44C6-8116-0BCFBBDA15D1}
 		{FD036780-3507-4F26-90CD-A4E9E38753EA} = {F0DB31A6-6BE0-44C6-8116-0BCFBBDA15D1}
 		{F2E55EC5-B11D-410C-8209-C4C61D6E7C9A} = {F0DB31A6-6BE0-44C6-8116-0BCFBBDA15D1}
@@ -242,7 +199,6 @@ Global
 		SolutionGuid = {FA2EBF1C-5C38-4A3C-8D5E-919483204C7A}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{2273fa24-9518-49ee-8893-e4b8d55dd692}*SharedItemsImports = 4
 		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{317d3e8a-3304-49fc-b606-a155a60207b0}*SharedItemsImports = 5
 		Igorary.Utils.Shared\Igorary.Utils.Shared.projitems*{97a2cca7-a862-4881-b78e-fb7672e2b3f3}*SharedItemsImports = 13
 		Igorary.Xaml.Shared\Igorary.Xaml.Shared.projitems*{e244578f-c42e-40b0-add0-73a5812f4aa1}*SharedItemsImports = 4
