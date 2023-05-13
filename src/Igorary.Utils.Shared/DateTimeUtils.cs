@@ -1,4 +1,7 @@
-﻿using System;
+﻿// DateTimeUtils.cs
+// Copyright (c) 2023 Covalition. All rights reserved.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
