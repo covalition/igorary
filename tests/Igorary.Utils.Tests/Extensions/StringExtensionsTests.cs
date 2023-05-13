@@ -79,5 +79,16 @@ namespace Igorary.Utils.Tests.Extensions
             Assert.AreEqual(output, input.ToNullIfEmpty());
         }
 
+        [TestMethod]
+        public void FormatTest()
+        {
+            Assert.AreEqual("test", "test".Format());
+            Assert.AreEqual("test", "test".Format(new object[] { null }));
+            Assert.AreEqual("test", "test".Format(""));
+            Assert.AreEqual("test", "{0}".Format("test"));
+            Assert.AreEqual("2", "{0}".Format(2));
+            Assert.AreEqual("test2", "{0}{1}".Format("test", 2));
+        }
+
     }
 }

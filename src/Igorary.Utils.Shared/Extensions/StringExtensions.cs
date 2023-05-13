@@ -137,5 +137,10 @@ namespace Igorary.Utils.Extensions
             for (int i = 0; i < source.Length; i += maxChunkSize)
                 yield return source.Substring(i, Math.Min(maxChunkSize, source.Length - i));
         }
+
+        public static string Format(this string source, params object[] args)
+        {
+            return string.Format(source, args);
+        }
     }
 }
