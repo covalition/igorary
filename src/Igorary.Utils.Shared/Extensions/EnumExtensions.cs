@@ -10,6 +10,11 @@ namespace Igorary.Utils.Extensions
 {
     public static class EnumExtensions
     {
+        /// <summary>
+        ///  Returns the value of the <see cref="DisplayAttribute.Name"/> attribute of the enum value or the enum value itself if the attribute is not present.
+        /// </summary>
+        /// <param name="enumValue"></param>
+        /// <returns></returns>
         public static string GetDisplayName(this Enum enumValue)
         {
             string res = enumValue.GetType()

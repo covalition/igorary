@@ -18,7 +18,7 @@ namespace Igorary.Utils.Extensions
     public static class StringExtensions
     {
         /// <summary>
-        /// Convert wildcard to regex
+        /// Convert a wildcard to regex
         /// </summary>
         /// <param name="wildcard"></param>
         /// <returns></returns>
